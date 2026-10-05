@@ -13,3 +13,11 @@ spring:
             - Path=/identity/**
           filters:
             - StripPrefix=1
+        - id: course-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/courses/**
+
+app:
+  jwt:
+    secret: "VS6K5vH8N2zB4xR9mQ3pL1wT7yC5vH8N2zB4xR9mQ3pL1wT7yC5vH8N2z"
